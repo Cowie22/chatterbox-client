@@ -18,12 +18,10 @@ body {
     width: 500px;
     margin: auto;
     text-align: left;
-    background: grey;
+    background: #5998ff;
     padding: 50px 60px;
     border: solid black;
     border-width: 0 1px 1px 1px;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 #main h1 {
