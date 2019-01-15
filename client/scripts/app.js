@@ -17,12 +17,15 @@ var App = {
 
   },
 
-  fetch: function(callback = ()=>{}) {
+  fetch: function(callback = (data)=>{}) {
     Parse.readAll((data) => {
       // examine the response from the server request:
-      console.log(data);
+      // for (var i = 0; i < data.results.length; i++) {
+      //   let currentUserName = JSON.stringify(data.results[i].username);
+      //   $('#chats').append(`${currentUserName}`);
+      // }
 
-      callback();
+      callback(data);
     });
   },
 
