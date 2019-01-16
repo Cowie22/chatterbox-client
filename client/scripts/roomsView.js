@@ -16,7 +16,7 @@ var RoomsView = {
       });
       uniqArr = _.uniq(roomArr);
       uniqArr.map(el => {
-        RoomsView.renderRoom({ roomname: el });
+        RoomsView.renderRoom({ 'roomname': el });
       });
     });
   },

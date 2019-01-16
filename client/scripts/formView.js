@@ -10,7 +10,24 @@ var FormView = {
     // Stop the browser from submitting the form
     event.preventDefault();
     
-    console.log('click!');
+    var message = {
+      roomname: 'lobby',
+      text: FormView.$form.find('#message').val(),
+      username: App.username
+    };
+
+    // Parse.create(message, () => {
+    //   Messages = Messages.concat(message);
+    //   MessagesView.render();
+    // });
+    Parse.create(message, () => {
+      Messages.add(message, MessagesView.render);
+    });
+    
+  
+  //   $('#chats').prepend(newMessage);
+  //   console.log($('#message').val());
+  //   console.log('click!');
   },
 
   setStatus: function(active) {
