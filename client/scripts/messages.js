@@ -1,10 +1,5 @@
 var Messages = {
   userName: 'ryan',
-  text: this.text,
-  roomname: this.roomname,
+  text: 'tooaaaaaddd',
+  roomname: 'basement',
 };
-
-
-
-// Messages.prototype.init
-// console.log(Messages)

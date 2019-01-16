@@ -4,23 +4,29 @@ var RoomsView = {
   $select: $('#rooms select'),
 
   initialize: function() {
-    var container = [];
+    let roomArr = [];
+    let uniqArr = [];
+    let dataArr = [];
     App.fetch(function(data) {
-
-      for (let i = 0; i < data.results.length; i++) {
-        RoomsView.renderRoom(data.results[i]);
-      }
+      dataArr = data.results;
+      dataArr.filter(el => {
+        if (el.roomname) {
+          roomArr.push(el.roomname);
+        }
+      });
+      uniqArr = _.uniq(roomArr);
+      uniqArr.map(el => {
+        RoomsView.renderRoom({ roomname: el });
+      });
     });
-
   },
 
   render: function() {
   },
 
-  renderRoom: function(message) {
-    var textMessages = _.escape(message.room);
-    console.log(textMessages);
-    $('#rooms select').append(`<span>${textMessages}</span>`);
+  renderRoom: function(room) {
+    $('#rooms').append(this.$select);
+    this.$select.append(Rooms.render(room));
   },
 
 };

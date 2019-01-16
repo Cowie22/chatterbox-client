@@ -18,8 +18,7 @@ var MessagesView = {
   },
 
   renderMessage: function(message) {
-    var textMessages = message;
-    console.log(textMessages);
+
     $('#chats').append(MessageView.render(message));
   },
 

@@ -1,9 +1,6 @@
 var MessageView = {
 
 
-// curentUser: App.fetch(),
-// console.log(user.results) 
-
   render: _.template(`
       <div class="chat">
         <div class="username"> <%- username %> </div>

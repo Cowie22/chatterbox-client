@@ -20,10 +20,8 @@ var App = {
   fetch: function(callback = (data)=>{}) {
     Parse.readAll((data) => {
       // examine the response from the server request:
-      // for (var i = 0; i < data.results.length; i++) {
-      //   let currentUserName = JSON.stringify(data.results[i].username);
-      //   $('#chats').append(`${currentUserName}`);
-      // }
+      // Messages = data.results
+      // console.log(data)
 
       callback(data);
     });
